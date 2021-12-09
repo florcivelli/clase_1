@@ -11,6 +11,7 @@ if (edad < 18) {
     alert('Bienvenido/a ' + nombre)
 }
 
+// --------------------Simulador--------------------------
 
 const recargo3 = 1.2; // 20%
 const recargo6 = 1.4; // 40%
@@ -19,7 +20,15 @@ const recargo12 = 1.6; // 60%
 let cantidadDinero = prompt("Digite la cantidad de dinero.")
 let cantidadCuotas = prompt("Digite la cantidad cuotas. (3, 6 o 12 cuotas)")
 
-// --------------------Funciones--------------------------
+function calcularMostrar(recargo) {
+  let total = cantidadDinero * recargo;
+  let valorCuota = total / cantidadCuotas;
+  console.log("total", total);
+  for (let i = 1; i <= cantidadCuotas; i++) {
+    console.log(`Cuota nro ${i}: 
+    $ ${valorCuota.toFixed(2)}`);
+  }
+}
 
 if (cantidadCuotas == 3) {
    let total = cantidadDinero*recargo3;
