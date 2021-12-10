@@ -1,3 +1,5 @@
+//............PROMPT, TYPEOF............
+
 let nombre = prompt('¡Hola! ¿Cuál es tu nombre?')
 let edad = +prompt('¿Edad?')
 
@@ -10,6 +12,40 @@ if (edad < 18) {
 } else {
     alert('Bienvenido/a ' + nombre)
 }
+
+//........Listado de productos, Arrays..........
+
+let vinos = [
+  {
+    nombre: "Alfil",
+    precio: 1800,
+    cantidad: 100
+  },
+  {
+    nombre: "Los Dragones",
+    precio: 2500,
+    cantidad: 100
+  },
+  {
+    nombre: "Los Dragones Torrontés",
+    precio: 2200,
+    cantidad: 100
+  },
+  {
+    nombre: "Maida",
+    precio: 1500,
+    cantidad: 100
+  }
+]
+
+for (const i of vinos){
+  console.log(i)
+}
+
+//.............Aplico un filtro.............
+
+let unVino = vinos.filter(vinos => vinos.precio == 1500)
+console.log(unVino)
 
 // --------------------Simulador--------------------------
 
@@ -48,4 +84,3 @@ if (cantidadCuotas == 3) {
 } else {
     console.log("No ingresó valor correcto")
 } 
-

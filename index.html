@@ -4,10 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafío Clase 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/estilo.css">
+    <link rel="stylesheet" href="<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    <title>Tienda - Los Dragones</title>
+    <meta name="description" content="Conocé nuestros vinos">
+    <meta name="keywords" content="vinos andinos, barreal, valle de calingasta, andres biscaisaque, alfil, los dragones, finca, viñedos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
-<body>
-    <script src="js/index.js"></script>
+<body class="container__vinos">
 
+    <header class="header__principal">
+        <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"></a>
+              <img src="./media/logo dragones fondo negro.png" alt="Logo" class="header__logo"> 
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    
+    <main>
+        <h1 class="título__nosotros">Tienda</h1>
+        <div class="padre__vinos">
+          <img class= "hijos__vinos" src="./media/alfil.png" alt="alfil">                 
+          <img class= "hijos__vinos" src="./media/los dragones.png" alt="los dragones"> 
+          <img class= "hijos__vinos" src="./media/los dragones torrontes.png" alt="los dragones torrontes">          
+          <img class= "hijos__vinos" src="./media/maida tinto.png" alt="maida">         
+        </div>
+    </main>
+
+    <footer class="footer__principal">
+        <section>
+            <p>Valle de Calingasta | San Juan | Argentina</p>  
+            <p>reservas@losdragones.com</p>
+        </section>  
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>    
 </body>
 </html>
+    
+
