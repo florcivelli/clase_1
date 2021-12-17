@@ -13,9 +13,50 @@ if (edad < 18) {
     alert('Bienvenido/a ' + nombre)
 }
 
+//Defino productos con una clase
+
+class Vinos {
+
+  constructor( nombre, precio, cantidad ) {
+      this.nombre = nombre;
+      this.precio = precio;
+      this.cantidad = cantidad
+  }  
+}
+
+const vino1 = new Vinos ("Alfil", 1800, 100)
+const vino2 = new Vinos ("Los Dragones", 2500, 100)
+const vino3 = new Vinos ("Los Dragones Torrontés", 2200, 100)
+const vino4 = new Vinos ("Maida", 1500, 100)
+
+class Carrito {
+
+  constructor( lista ) {
+      this.lista = lista;
+  }
+
+  findAllItems() {
+      return this.lista;
+  }
+
+  createItem( item ) {
+      this.lista.push( item )
+  }
+}
+
+const carrito = new Carrito([])
+
+carrito.createItem( vino1 )
+carrito.createItem( vino2 )
+carrito.createItem( vino3 )
+carrito.createItem( vino4 )
+
+// Obtengo los items del carrito
+console.log( carrito.findAllItems() )
+
 //........Listado de productos, Arrays..........
 
-let vinos = [
+/* let vinos = [
   {
     nombre: "Alfil",
     precio: 1800,
@@ -36,16 +77,16 @@ let vinos = [
     precio: 1500,
     cantidad: 100
   }
-]
+] */
 
-for (const i of vinos){
+/* for (const i of vinos){
   console.log(i)
-}
+} */
 
 //.............Aplico un filtro.............
 
-let unVino = vinos.filter(vinos => vinos.precio == 1500)
-console.log(unVino)
+/* let unVino = vinos.filter(vinos => vinos.precio == 1500)
+console.log(unVino) */
 
 // --------------------Simulador--------------------------
 
