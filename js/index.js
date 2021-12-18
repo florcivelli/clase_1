@@ -1,6 +1,6 @@
 //............PROMPT, TYPEOF............
 
-let nombre = prompt('¡Hola! ¿Cuál es tu nombre?')
+/* let nombre = prompt('¡Hola! ¿Cuál es tu nombre?')
 let edad = +prompt('¿Edad?')
 
 console.log(nombre, typeof nombre);
@@ -11,25 +11,42 @@ if (edad < 18) {
    alert('Debe ser mayor de edad')   
 } else {
     alert('Bienvenido/a ' + nombre)
-}
+} */
 
 //Defino productos con una clase
 
-class Vinos {
+//class Vinos {
 
-  constructor( nombre, precio, cantidad ) {
+  function Vinos( nombre, precio, cantidad, img ) {
       this.nombre = nombre;
       this.precio = precio;
-      this.cantidad = cantidad
+      this.cantidad = cantidad;
+      this.img = img;
   }  
-}
+//}
 
-const vino1 = new Vinos ("Alfil", 1800, 100)
-const vino2 = new Vinos ("Los Dragones", 2500, 100)
-const vino3 = new Vinos ("Los Dragones Torrontés", 2200, 100)
-const vino4 = new Vinos ("Maida", 1500, 100)
+let vino1 = new Vinos("Alfil", 1800, 100, './media/alfil.png');
+let vino2 = new Vinos("Los Dragones", 2500, 100, './media/los dragones.png');
+let vino3 = new Vinos("Los Dragones Torrontés", 2200, 100, './media/los dragones torrontes.png');
+let vino4 = new Vinos("Maida", 1500, 100, './media/maida tinto.png');
 
-class Carrito {
+let misVinos = [];
+
+misVinos.push(vino1, vino2, vino3, vino4);
+
+let contenedorProductos = document.getElementById('contenedor-productos')
+
+for (let Vinos of misVinos){
+let div = document.createElement('div'); 
+div.setAttribute('class', "padre__vinos")
+
+div.innerHTML = `
+<img src="${Vinos.img}" alt="" width="150">
+`;
+
+contenedorProductos.appendChild(div);
+
+/* class Carrito {
 
   constructor( lista ) {
       this.lista = lista;
@@ -52,7 +69,7 @@ carrito.createItem( vino3 )
 carrito.createItem( vino4 )
 
 // Obtengo los items del carrito
-console.log( carrito.findAllItems() )
+console.log( carrito.findAllItems() ) */
 
 //........Listado de productos, Arrays..........
 
@@ -90,7 +107,7 @@ console.log(unVino) */
 
 // --------------------Simulador--------------------------
 
-const recargo3 = 1.2; // 20%
+/* const recargo3 = 1.2; // 20%
 const recargo6 = 1.4; // 40%
 const recargo12 = 1.6; // 60%
 
@@ -124,4 +141,4 @@ if (cantidadCuotas == 3) {
     console.log("valor cuota", valorCuota);
 } else {
     console.log("No ingresó valor correcto")
-} 
+}
