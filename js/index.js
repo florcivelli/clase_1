@@ -1,29 +1,14 @@
-//............PROMPT, TYPEOF............
 
-/* let nombre = prompt('¡Hola! ¿Cuál es tu nombre?')
-let edad = +prompt('¿Edad?')
+import { Carrito } from "./carrito.js";
 
-console.log(nombre, typeof nombre);
-console.log(edad, typeof edad);
-
-
-if (edad < 18) {
-   alert('Debe ser mayor de edad')   
-} else {
-    alert('Bienvenido/a ' + nombre)
-} */
-
-//Defino productos con una clase
-
-//class Vinos {
+const carrito = new Carrito();
 
   function Vinos( nombre, precio, cantidad, img ) {
       this.nombre = nombre;
       this.precio = precio;
       this.cantidad = cantidad;
       this.img = img;
-  }  
-//}
+}  
 
 let vino1 = new Vinos("Alfil", 1800, 100, './media/alfil.png');
 let vino2 = new Vinos("Los Dragones", 2500, 100, './media/los dragones.png');
@@ -40,11 +25,39 @@ for (let Vinos of misVinos){
 let div = document.createElement('div'); 
 div.setAttribute('class', "padre__vinos")
 
+
 div.innerHTML = `
-<img src="${Vinos.img}" alt="" width="150">
-`;
+<img src="${Vinos.img}" alt="" width="220">
+`; 
 
 contenedorProductos.appendChild(div);
+
+
+div.addEventListener('click', function () {
+  console.log( Vinos.nombre )
+  carrito.createItem ( Vinos )
+})
+}
+
+const botonComprar = document.getElementById( 'boton__compra' )
+botonComprar.addEventListener('click', function () {
+    alert( `Usted ha comprado ${ JSON.stringify(carrito.findAllItems() ) }` )
+})
+
+//............PROMPT, TYPEOF............
+
+/* let nombre = prompt('¡Hola! ¿Cuál es tu nombre?')
+let edad = +prompt('¿Edad?')
+
+console.log(nombre, typeof nombre);
+console.log(edad, typeof edad);
+
+
+if (edad < 18) {
+   alert('Debe ser mayor de edad')   
+} else {
+    alert('Bienvenido/a ' + nombre)
+} */
 
 /* class Carrito {
 
@@ -140,5 +153,4 @@ if (cantidadCuotas == 3) {
     console.log("total", total);
     console.log("valor cuota", valorCuota);
 } else {
-    console.log("No ingresó valor correcto")
-}
+    console.log("No ingresó valor correcto")}*/
