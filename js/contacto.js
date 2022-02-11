@@ -12,3 +12,18 @@ nombreComprador.onkeyup = (event) => {
     nombre = event.target.value
 }
 
+//jQuery
+
+$('#formcontacto').submit( function (event) {
+    event.preventDefault()
+
+    let children = $(event.target).children();
+
+    const name = $('#nombre__comprador')[0].value
+    const email = $('#exampleFormControlInput1')[0].value
+    const asunto = $('#Asunto')[0].value
+    const mensaje = $('#exampleFormControlTextarea1')[0].value
+
+    console.log(name, email, asunto, mensaje)
+    
+})

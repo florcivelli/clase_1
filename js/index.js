@@ -3,6 +3,7 @@ import { Carrito } from "./carrito.js";
 
 const carrito = new Carrito();
 
+
   function Vinos( nombre, precio, cantidad, img ) {
       this.nombre = nombre;
       this.precio = precio;
@@ -10,10 +11,10 @@ const carrito = new Carrito();
       this.img = img;
 }  
 
-let vino1 = new Vinos("Alfil", 1800, 100, './media/alfil.png');
-let vino2 = new Vinos("Los Dragones", 2500, 100, './media/los dragones.png');
-let vino3 = new Vinos("Los Dragones Torrontés", 2200, 100, './media/los dragones torrontes.png');
-let vino4 = new Vinos("Maida", 1500, 100, './media/maida tinto.png');
+let vino1 = new Vinos("Alfil", 1800, 100, './media/alfil2.png');
+let vino2 = new Vinos("Los Dragones", 2500, 100, './media/los dragones2.png');
+let vino3 = new Vinos("Los Dragones Torrontés", 2200, 100, './media/los dragones torrontes2.png');
+let vino4 = new Vinos("Maida", 1500, 100, './media/maida tinto2.png');
 
 let misVinos = [];
 
@@ -27,7 +28,7 @@ div.setAttribute('class', "padre__vinos")
 
 
 div.innerHTML = `
-<img src="${Vinos.img}" alt="" width="220">
+<img src="${Vinos.img}" alt="" width="220" style="cursor:pointer;" name="">
 `; 
 
 contenedorProductos.appendChild(div);
